@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
-    <div className='h-screen w-full bg-[#ece9e9] p-4'>
+    <div className='h-screen w-full bg-[#fff] px-4'>
       <Navbar/>
+      <Dashboard/>
     </div>
   )
 }
