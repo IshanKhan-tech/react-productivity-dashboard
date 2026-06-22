@@ -14,3 +14,11 @@ h4{
   font-family: 'Poppins', sans-serif;
 }
 
+
+.active-link {
+  padding: 2px 8px;
+  background-color: rgb(231, 227, 227);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow:0 0 0 #222;
+}
