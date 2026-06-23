@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureCard = ({ data }) => {
   return (
-    <div className='relative h-40 w-129 flex items-center justify-center overflow-hidden cursor-pointer'>
+    <div className='relative h-40 w-128 flex items-center justify-center overflow-hidden cursor-pointer'>
       <img
         className='absolute inset-0 w-full h-full object-cover'
         src={data.img}

@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
+:root {
+  --bg-color: 255 255 255;
+  --text-color: 17 17 17;
+}
+
+.dark {
+  --bg-color: 17 17 17;
+  --text-color: 255 255 255;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #222;
+  background: var(--bg-color);
+  color:var(--text-color) ;
 }
 
 /* Headings Font */
@@ -20,5 +30,4 @@ h4{
   background-color: rgb(231, 227, 227);
   font-weight: bold;
   border-radius: 10px;
-  box-shadow:0 0 0 #222;
 }

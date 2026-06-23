@@ -7,7 +7,7 @@ import Quotes from './pages/Quotes';
 
 const App = () => {
   return (
-    <div className='h-screen w-full bg-[#fff] px-4'>
+    <div className=' w-full bg-[#fff] px-4 mt-19'>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Dashboard/>} />
