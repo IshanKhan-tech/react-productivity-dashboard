@@ -20,7 +20,6 @@ const Notes = () => {
       "notes",
       JSON.stringify(updatedNotes)
     )
-    // console.log(allInput);
     setInput("")
   }
   useEffect(() => {

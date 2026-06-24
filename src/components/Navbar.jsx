@@ -31,6 +31,14 @@ const Navbar = () => {
         >
           Quotes
         </NavLink>
+        <NavLink
+          to="/task"
+          className={({ isActive }) =>
+            isActive ? "active-link" : ""
+          }
+        >
+          Task
+        </NavLink>
       </div>
     </div>
   )

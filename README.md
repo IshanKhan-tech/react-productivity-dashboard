@@ -1,33 +1,58 @@
 # React Productivity Dashboard
 
-This is my personal React learning project.
+This is a dashboard project that I'm building while learning React.
 
-The main goal of this project is to improve my React skills by building a real-world dashboard instead of only following tutorials.
+I started this project to practice React with a single real project instead of creating lots of small tutorial projects. I'm adding new features step by step as I learn new concepts.
 
-## Features (Planned)
+## Current Features
 
-- Weather
-- Notes
-- Daily Tasks
-- Motivational Quotes
-- Digital Clock
-- Calendar
-- Dark Mode
-- Responsive Design
-- GSAP Animations (Later)
-- Lenis Smooth Scroll (Later)
+* Live Clock
+* Weather Information
+* Motivational Quotes
+* Notes Page
+* Tasks Page
+* React Router Navigation
+* Responsive Navbar
+* Dynamic Dashboard Hero Section
 
 ## Tech Stack
 
-- React
-- Vite
-- Tailwind CSS
-- JavaScript
+* React
+* Vite
+* Tailwind CSS
+* JavaScript
+* React Router DOM
 
-## Current Progress
+## Project Structure
 
-- Project setup completed
-- GitHub repository connected
-- Basic Navbar created
+Currently the project contains:
 
-More features and improvements will be added step by step as I continue learning.
+* Dashboard Page
+* Notes Page
+* Tasks Page
+* Quotes Page
+* Reusable Components
+* API Integration
+
+## What I'm Practicing
+
+* Components
+* Props
+* useState
+* useEffect
+* API Fetching
+* Routing
+* Reusable UI
+* Git & GitHub
+
+## Next Things To Add
+
+* Add/Edit/Delete Notes
+* Better Task Management
+* Local Storage
+* Dark Mode
+* GSAP Animations
+* Lenis Smooth Scroll
+* More Dashboard Widgets
+
+This project is still in progress and I'll keep updating it as I learn more React.
