@@ -56,6 +56,7 @@ const WeatherHero = () => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Content */}
+            
             <div className="p-4 relative z-10 flex justify-between text-white h-full">
                 <div className="left flex flex-col justify-between ">
                     <div className='flex flex-col gap-4 '>

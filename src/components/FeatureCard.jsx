@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const FeatureCard = ({ data }) => {
+  const navigate = useNavigate()
   return (
-    <div className='relative h-40 w-128 flex items-center justify-center overflow-hidden cursor-pointer'>
+    <div onClick={()=>{
+      navigate(data.route)
+      console.log(data);
+      
+    }} className='relative h-40 w-128 flex items-center justify-center overflow-hidden cursor-pointer'>
       <img
         className='absolute inset-0 w-full h-full object-cover'
         src={data.img}

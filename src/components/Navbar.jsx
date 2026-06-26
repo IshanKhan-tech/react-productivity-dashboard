@@ -32,12 +32,12 @@ const Navbar = () => {
           Quotes
         </NavLink>
         <NavLink
-          to="/task"
+          to="/timer"
           className={({ isActive }) =>
             isActive ? "active-link" : ""
           }
         >
-          Task
+          Pomodaro-Timer
         </NavLink>
       </div>
     </div>
