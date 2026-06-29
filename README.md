@@ -1,19 +1,40 @@
 # React Productivity Dashboard
 
-This is a dashboard project that I'm building while learning React.
+This is a React dashboard project that I'm building while learning React.
 
-I started this project to practice React with a single real project instead of creating lots of small tutorial projects. I'm adding new features step by step as I learn new concepts.
+Instead of making lots of small projects, I decided to practice everything inside a single project and keep improving it as I learn new concepts.
 
-## Current Features
+## Features Added
 
-* Live Clock
-* Weather Information
+* Live Weather Information
+* Real-time Digital Clock
+* Dynamic Hero Section
+* Notes App
+
+  * Add Notes
+  * Edit Notes
+  * Delete Notes
+  * Local Storage Support
+* Task Manager
+
+  * Add Tasks
+  * Delete Tasks
+  * Local Storage Support
 * Motivational Quotes
-* Notes Page
-* Tasks Page
+
+  * API Integration
+  * Refresh Quotes
+* Pomodoro Timer
+
+  * Start
+  * Pause
+  * Reset
+  * Short Break
+  * Long Break
 * React Router Navigation
+* Page Transitions
 * Responsive Navbar
-* Dynamic Dashboard Hero Section
+* Reusable Components
 
 ## Tech Stack
 
@@ -22,17 +43,9 @@ I started this project to practice React with a single real project instead of c
 * Tailwind CSS
 * JavaScript
 * React Router DOM
-
-## Project Structure
-
-Currently the project contains:
-
-* Dashboard Page
-* Notes Page
-* Tasks Page
-* Quotes Page
-* Reusable Components
-* API Integration
+* GSAP
+* Local Storage
+* APIs
 
 ## What I'm Practicing
 
@@ -40,19 +53,20 @@ Currently the project contains:
 * Props
 * useState
 * useEffect
-* API Fetching
 * Routing
+* API Fetching
+* Local Storage
 * Reusable UI
+* Animations
 * Git & GitHub
 
-## Next Things To Add
+## Upcoming Features
 
-* Add/Edit/Delete Notes
-* Better Task Management
-* Local Storage
 * Dark Mode
-* GSAP Animations
+* GSAP Text Reveal Integration
 * Lenis Smooth Scroll
-* More Dashboard Widgets
+* Task Filters
+* Better Dashboard Statistics
+* More Widgets
 
-This project is still in progress and I'll keep updating it as I learn more React.
+This project is still in progress and I'm updating it regularly while learning React.

@@ -1,47 +1,55 @@
-import { NavLink } from "react-router-dom";
-{/* <NavLink to="/">Home</NavLink>
-<NavLink to="/notes">About</NavLink> */}
+import TextReveal from "./TextReveal";
+import useViewTransition from "../hooks/useViewTransition";
 
 const Navbar = () => {
+  const { navigateTo } = useViewTransition();
+
   return (
-    <div className='w-full absolute top-0 left-0  p-5 flex items-center justify-between '>
-      <div ><h1 className="text-2xl font-semibold">Dashboard.Tech</h1></div>
+    <div className="w-full absolute top-0 left-0 p-5 flex items-center justify-between">
+
+      <div>
+        <TextReveal splitBy="chars">
+          <h1 className="text-2xl font-semibold cursor-pointer"
+              onClick={() => navigateTo("/")}>
+            Dashboard.Tech
+          </h1>
+        </TextReveal>
+      </div>
+
       <div className="flex gap-5">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+
+        <button
+          onClick={() => navigateTo("/")}
+          className="cursor-pointer"
         >
           Dashboard
-        </NavLink>
-        <NavLink
-          to="/notes"
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+        </button>
+
+        <button
+          onClick={() => navigateTo("/notes")}
+          className="cursor-pointer"
         >
           Notes
-        </NavLink>
-        <NavLink
-          to="/quotes"
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
+        </button>
+
+        <button
+          onClick={() => navigateTo("/quotes")}
+          className="cursor-pointer"
         >
           Quotes
-        </NavLink>
-        <NavLink
-          to="/timer"
-          className={({ isActive }) =>
-            isActive ? "active-link" : ""
-          }
-        >
-          Pomodaro-Timer
-        </NavLink>
-      </div>
-    </div>
-  )
-}
+        </button>
 
-export default Navbar
+        <button
+          onClick={() => navigateTo("/timer")}
+          className="cursor-pointer"
+        >
+          Pomodoro Timer
+        </button>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default Navbar;

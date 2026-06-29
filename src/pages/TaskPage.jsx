@@ -39,7 +39,7 @@ const TaskPage = () => {
                         setAllInput(ans)
 
                         localStorage.setItem("task",JSON.stringify(ans))
-                    }} className='bg-green-300 rounded-xl px-2 text-lg'>Done</button>
+                    }} className='bg-red-300 rounded-xl px-2 text-lg'>Delete</button>
                 </div>
             })}
         </div>

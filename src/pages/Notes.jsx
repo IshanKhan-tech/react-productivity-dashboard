@@ -4,23 +4,39 @@ import React, { useEffect, useState } from 'react'
 const Notes = () => {
   const [input, setInput] = useState('')
   const [allInput, setAllInput] = useState([])
+  const [editIdx, setEditIdx] = useState(null)
 
 
   const submitHandler = (e) => {
     e.preventDefault()
-    if (input.trim() !== "") {
+    if(editIdx === null){
+      if (input.trim() !== "") {
 
       setAllInput([...allInput, input])
+      const updatedNotes = [...allInput, input]
+
+      setAllInput(updatedNotes)
+
+      localStorage.setItem(
+        "notes",
+        JSON.stringify(updatedNotes)
+      )
+      setInput("")
     }
-    const updatedNotes = [...allInput, input]
-
-    setAllInput(updatedNotes)
-
+  }else{
+    const temp = [...allInput]
+    temp[editIdx]=input
+    setAllInput(temp)
+  
     localStorage.setItem(
-      "notes",
-      JSON.stringify(updatedNotes)
-    )
-    setInput("")
+  "notes",
+  JSON.stringify(temp)
+)
+    
+
+    setEditIdx(null)
+    setInput('')
+  }
   }
   useEffect(() => {
     const data = localStorage.getItem("notes")
@@ -38,22 +54,31 @@ const Notes = () => {
           setInput(e.target.value)
 
         }} value={input} className='p-3 text-2xl w-1/2 border rounded-lg' type="text" placeholder='Add Note' />
-        <button className='p-3 cursor-pointer text-2xl w-1/2 border bg-green-300 rounded-lg' type="submit">Add Your Notes</button>
+        <button className='p-3 active:scale-95 cursor-pointer text-2xl w-1/2 border bg-green-300 rounded-lg' type="submit">Add Your Notes</button>
       </form>
       {allInput.map((elem, idx) => {
-        return <div key={idx} className='text-3xl p-4 bg-amber-100 mt-6 flex items-center justify-between'>
+        return <div key={idx} className='text-3xl p-4 bg-amber-100 rounded-2xl mt-6 flex items-center justify-between'>
           <h1>{elem}</h1>
-          <h5 onClick={() => {
-            const inp = allInput.filter((el, index) => {
-              return idx !== index
-            })
 
-            setAllInput(inp)
-            localStorage.setItem(
-              "notes",
-              JSON.stringify(inp)
-            )
-          }} className='py-1 px-2.5 bg-red-400 rounded-full'>X</h5>
+          <div className='flex items-center justify-center gap-20 '>
+            <button onClick={()=>{
+              setEditIdx(idx)
+              setInput(elem)
+              console.log(editIdx, elem);
+              
+            }} className='py-1 px-2.5 rounded bg-amber-50 active:scale-95'>Edit</button>
+            <button onClick={() => {
+              const inp = allInput.filter((el, index) => {
+                return idx !== index
+              })
+
+              setAllInput(inp)
+              localStorage.setItem(
+                "notes",
+                JSON.stringify(inp)
+              )
+            }} className='py-1 px-2.5 bg-red-400 rounded-full active:scale-95'>X</button>
+          </div>
         </div>
       })}
     </div>
