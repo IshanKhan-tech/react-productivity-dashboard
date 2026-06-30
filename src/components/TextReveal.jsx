@@ -38,7 +38,7 @@ const TextReveal = forwardRef(
         const elements = splitRef.current[splitBy];
 
         gsap.set(elements, {
-          yPercent: 110,
+          yPercent: -110,
         });
 
         tlRef.current = gsap.timeline({

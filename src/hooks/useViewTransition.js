@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 
-const STRIP_COUNT = 12;
+const STRIP_COUNT = 16;
 
 const createStrips = () => {
   const overlay = document.createElement("div");
@@ -23,7 +23,7 @@ const createStrips = () => {
     strip.style.cssText = `
       flex: 1;
       height: 100%;
-      background: #010101;
+      background: #000;
       transform: scaleY(0);
       transform-origin: bottom;
     `;

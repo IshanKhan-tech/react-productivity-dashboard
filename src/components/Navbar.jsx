@@ -1,5 +1,6 @@
 import TextReveal from "./TextReveal";
 import useViewTransition from "../hooks/useViewTransition";
+import HoverText from "./HoverText";
 
 const Navbar = () => {
   const { navigateTo } = useViewTransition();
@@ -8,10 +9,11 @@ const Navbar = () => {
     <div className="w-full absolute top-0 left-0 p-5 flex items-center justify-between">
 
       <div>
-        <TextReveal splitBy="chars">
+        <TextReveal >
           <h1 className="text-2xl font-semibold cursor-pointer"
-              onClick={() => navigateTo("/")}>
-            Dashboard.Tech
+            onClick={() => navigateTo("/")}>
+              <HoverText text="Dashboard.Tech" />
+            
           </h1>
         </TextReveal>
       </div>
@@ -22,28 +24,36 @@ const Navbar = () => {
           onClick={() => navigateTo("/")}
           className="cursor-pointer"
         >
-          Dashboard
+          <TextReveal>
+          <HoverText text="Dashboard" />
+          </TextReveal>
         </button>
 
         <button
           onClick={() => navigateTo("/notes")}
           className="cursor-pointer"
         >
-          Notes
+           <TextReveal>
+            <HoverText text="Notes" />
+          </TextReveal>
         </button>
 
         <button
           onClick={() => navigateTo("/quotes")}
           className="cursor-pointer"
         >
-          Quotes
+           <TextReveal>
+            <HoverText text="Quotes" />
+          </TextReveal>
         </button>
 
         <button
           onClick={() => navigateTo("/timer")}
           className="cursor-pointer"
         >
-          Pomodoro Timer
+           <TextReveal>
+            <HoverText text="Pomodoro Timer" />
+          </TextReveal>
         </button>
 
       </div>
